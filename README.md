@@ -41,3 +41,7 @@ In **More options**, choose **Canvas ratio** to preview a video in common social
 [Build from source](docs/BUILDING.md) · [Contribute](CONTRIBUTING.md) · [Architecture](docs/ARCHITECTURE.md) · [Interface guide](docs/INTERFACE.md) · [Support](SUPPORT.md)
 
 LinuxPlayer is open source under [GPL-3.0-or-later](LICENSE). Its playback engine is the system's libmpv; [third-party license details](docs/LICENSING.md).
+
+## Development and AI use
+
+Generative AI assisted with writing and modifying a substantial portion of LinuxPlayer's production source code. The human maintainer directs the product and remains responsible for reviewing, testing, and maintaining the resulting code. Changes are expected to follow the review and manual playback checks in [CONTRIBUTING.md](CONTRIBUTING.md). The repository's [CI workflow](.github/workflows/ci.yml) builds the application, runs its available tests, checks package metadata, and installs and smoke-tests packages on supported Ubuntu runners. These checks do not guarantee that every platform or media file works correctly; please [report reproducible problems](https://github.com/teamkrope/linuxplayer/issues).
