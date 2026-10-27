@@ -1,0 +1,44 @@
+name: linuxplayer
+title: LinuxPlayer
+base: core24
+version: '1.0.0'
+summary: A clean, modern video player for Linux
+description: |
+  LinuxPlayer plays local videos with a focused interface powered by libmpv.
+  It supports subtitles, playback speed, resume, a compact mini-player, and
+  canvas ratio previews without changing the original video file.
+grade: stable
+confinement: strict
+license: GPL-3.0-or-later
+website: https://linuxplayer.teamkrope.com/
+source-code: https://github.com/teamkrope/linuxplayer
+issues: https://github.com/teamkrope/linuxplayer/issues
+icon: snap/gui/linuxplayer.png
+platforms:
+  amd64:
+  arm64:
+
+apps:
+  linuxplayer:
+    command: usr/bin/linuxplayer
+    extensions: [kde-neon-6]
+    common-id: io.github.teamkrope.LinuxPlayer.desktop
+    desktop: usr/share/applications/io.github.teamkrope.LinuxPlayer.desktop
+    plugs:
+      - home
+      - removable-media
+
+parts:
+  linuxplayer:
+    plugin: cmake
+    source: https://github.com/teamkrope/linuxplayer.git
+    source-tag: v1.0.0
+    build-packages:
+      - libmpv-dev
+      - pkg-config
+    stage-packages:
+      - libmpv2
+    cmake-parameters:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DBUILD_TESTING=OFF
+      - -DCMAKE_INSTALL_PREFIX=/usr
