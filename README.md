@@ -6,6 +6,12 @@ A clean, modern video player for Linux.
 
 ## Download
 
+[**Install from the Snap Store**](https://snapcraft.io/linuxplayer) on amd64, or run:
+
+```bash
+sudo snap install linuxplayer
+```
+
 [**Download (.deb, 64-bit x86)**](https://github.com/teamkrope/linuxplayer/releases/latest/download/linuxplayer_amd64.deb)
 
 Open the downloaded file with your package installer, or run `sudo apt install ./linuxplayer_amd64.deb` from its folder. The package is built on an older supported Ubuntu baseline and install-tested on newer Ubuntu. Your package manager checks dependencies on your system.
